@@ -1,0 +1,46 @@
+GLB_T = 54
+GLB_X = 24
+GLB_Y = 24
+GLB_Z = 24
+NP_T = 1
+NP_X = 1
+NP_Y = 1
+NP_Z = 1
+
+rlx_level = 1
+rlx_seed = 13813
+rlx_start = new
+rlx_state = rand_state
+
+N_REP = 1
+
+mes:masses = 0
+mes:use_input_mass = 0;
+mes:precision = 1e-20
+mes:meas_mixed = 0
+mes:nhits_2pt = 1
+mes:nhits_disc = 0
+mes:momentum = 0
+mes:def_semwall = 0
+mes:def_point = 1
+mes:def_baryon = 0
+mes:def_chimera = 0
+mes:def_gfwall = 0
+mes:ext_semwall = 0
+mes:ext_point = 0
+mes:dirichlet_semwall = 0
+mes:dirichlet_point = 0
+mes:dirichlet_gfwall = 0
+mes:discon_semwall = 0
+mes:discon_gfwall = 0
+mes:discon_volume = 0
+mes:dilution = 0
+mes:dirichlet_dt = 0
+
+mes:background_field = 0
+mes:Q =  0.5
+mes:nEz = 1
+
+mes:csw = 1.9192
+mes:rho_s = 0.15
+mes:rho_t = 0.15
