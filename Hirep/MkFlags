@@ -1,0 +1,96 @@
+NG = 2
+REPR = REPR_FUNDAMENTAL
+#REPR = REPR_SYMMETRIC
+#REPR = REPR_ANTISYMMETRIC
+#REPR = REPR_ADJOINT
+
+#CHOICES ARE GAUGE_SUN AND GAUGE_SON 
+GAUGE_GROUP = GAUGE_SUN
+#GAUGE_GROUP = GAUGE_SON
+
+#T => PERIODIC, ANTIPERIODIC, OPEN, THETA
+#X => PERIODIC, ANTIPERIODIC, THETA
+#Y => PERIODIC, ANTIPERIODIC, THETA
+#Z => PERIODIC, ANTIPERIODIC, THETA
+
+#MACRO += -DBC_T_THETA
+MACRO += -DBC_T_PERIODIC
+#MACRO += -DBC_T_ANTIPERIODIC
+#MACRO += -DBC_T_OPEN
+MACRO += -DBC_X_PERIODIC
+MACRO += -DBC_Y_PERIODIC
+MACRO += -DBC_Z_PERIODIC
+
+#MACRO += -DBC_XYZ_TWISTED
+
+#MACRO += -DHALFBG_SF
+#MACRO += -DBASIC_SF
+#MACRO += -DROTATED_SF
+
+
+#MACRO += -DWITH_SMEARING
+#MACRO += -DWITH_CLOVER
+#MACRO += -DWITH_EXPCLOVER
+MACRO += -DUPDATE_EO
+#MACRO += -DWITH_MPI
+#MACRO += -DWITH_QUATERNIONS
+#MACRO += -DPURE_GAUGE_ANISOTROPY
+#MACRO += -DNDEBUG
+#MACRO += -DDPHI_FLOAT
+#MACRO += -DCHECK_SPINOR_MATCHING
+#MACRO += -DMPI_TIMING
+MACRO += -DIO_FLUSH
+#MACRO += -DUNROLL_GROUP_REPRESENT
+#MACRO += -DTIMING
+#MACRO += -DTIMING_WITH_BARRIERS
+#MACRO += -DAMALLOC_MEASURE
+#MACRO += -DMEASURE_FORCE
+#MACRO += -DWITH_UNTESTED
+#MACRO += -DSIMD_VECTOR_HIREP
+#MACRO += -DAVX2_HIREP
+#Compiler
+CFLAGS = -Wall -Wshadow -std=c11 -O3 -fomit-frame-pointer -msse -msse2 
+#CFLAGS = -Wall -Wshadow -std=c11 -O3 -march=core-avx2 -mtune=core-avx2  #-fopenmp #-g
+#CFLAGS = -Wall -Wshadow -std=c11 -O3  #-fopenmp #-g #-march=core-avx2 -mtune=core-avx2 -g
+#CFLAGS = -Wall -Wshadow -std=c11 -O3 -fopenmp=libomp
+#CFLAGS = -Wall -Wshadow -std=c11 -O3 -qopt-prefetch=4 -qopt-report=2 -march=core-avx2 -mtune=core-avx2
+
+CC = gcc
+LDFLAGS =
+
+#CC = gcc-11
+#MPICC = /opt/local/bin/mpicc
+#LDFLAGS = -L /opt/local/lib/mpich-mp/ -L /opt/local/lib/ -fopenmp #-l efence
+#INCLUDE = -I /opt/local/include/mpich-mp/ -I /opt/local/include/  -I /usr/include
+#CC = /opt/local/bin/gcc-mp-13
+#MPICC = /opt/local/bin/mpicc-mpich-gcc13
+#LDFLAGS = #-fopenmp #-l efence
+#INCLUDE = -I /opt/local/include -I /opt/local/include/gcc13 -I /opt/local/include/mpich-gcc13/
+
+#CC = /opt/local/bin/clang-mp-17   
+#MPICC = /opt/local/bin/mpicc-mpich-clang17
+#LDFLAGS = #-fopenmp #-l efence
+#INCLUDE = -I /opt/local/include/clang17 -I /opt/local/include/mpich-clang17/
+
+
+#CC = clang
+#MPICC = /usr/local/bin/mpicc
+#LDFLAGS = #-l efence
+#INCLUDE = #-I /opt/local/include/gcc11 -I /opt/local/include/libomp/ -I /opt/local/include  -I /usr/include
+#
+
+#CC = clang
+#MPICC = mpicc
+#LDFLAGS =  #-L /opt/local/lib/mpich-devel-clang80/ -L /opt/local/lib/ #-lefence #-lprofiler #-l efence
+#INCLUDE = #-I /opt/local/include/mpich-clang80/
+
+
+#CC = clang-mp-6.0
+#MPICC = mpicc-openmpi-devel-clang60
+#LDFLAGS =  -L /opt/local/lib/openmpi-devel-clang60/ -L /opt/local/lib/ #-l efence
+#INCLUDE = -I /opt/local/include/openmpi-devel-clang60/
+
+#CC = icc
+#MPICC = mpiicc
+#LDFLAGS =  -L /opt/local/lib/mpich-devel-gcc7/ -L /opt/local/lib/ #-l efence
+#INCLUDE = -I /opt/local/include/mpich-devel-gcc7/
