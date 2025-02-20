@@ -1,1 +1,1 @@
-Lecture notes will be coming soon!
+Lecture notes is coming soon!
